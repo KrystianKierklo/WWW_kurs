@@ -10,8 +10,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
-
-nav {
+.nav {
 	height: 50px;
 	background-color: #333;
 	text-align: center;
@@ -19,11 +18,11 @@ nav {
 	font-size: 0;
 }
 
-nav li {
+.nav-item {
 	display: inline-block;
 }
 
-nav li a{
+.nav-item a {
 	padding: 0 50px;
 	color: #fff;
 	text-decoration: none;
@@ -31,9 +30,39 @@ nav li a{
 	font-weight: bold;
 	font-size: 16px;
 	letter-spacing: 2px;
-	transition: color .2s;
+	transition: color 0.2s;
 }
 
-nav li a:hover{
+.nav-item a:hover {
 	color: rgb(121, 121, 214);
+}
+
+.header-img {
+	position: relative;
+	height: 300px;
+	background-image: url('../img/monitor-gf7fc280e1_1920.jpg');
+	background-size: cover;
+	background-position: 0 65%;
+}
+
+.header-text {
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	z-index: 5;
+}
+
+.header-bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 5, 9, 0.55);
+}
+
+.header-text h1 {
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
 }
