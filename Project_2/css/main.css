@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Comfortaa', cursive;
 	font-family: 'Nunito', sans-serif;
@@ -11,10 +15,13 @@ body {
 }
 
 nav {
+	position: sticky;
+	top: 0;
 	height: 60px;
 	line-height: 60px;
 	background-color: #ddd;
 	text-align: center;
+	z-index: 10;
 }
 
 .wrapper {
@@ -50,17 +57,159 @@ nav {
 	.nav-items {
 		display: block;
 	}
+
+	.nav-items a {
+		padding: 0 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #333;
+		transition: color 0.2s;
+	}
+	.nav-items a:hover {
+		color: brown;
+	}
+
+	.header {
+		position: relative;
+		background-image: url(../img/pizza-big.jpg);
+		height: 4000px;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.hero-text h1 {
+		font-size: 36px;
+	}
+
+	.hero-text p {
+		font-size: 18px;
+	}
 }
 
-.nav-items a {
-	padding: 0 30px;
-	text-decoration: none;
+.header {
+	position: relative;
+	background-image: url(../img/pizza-small.jpg);
+	height: 330px;
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+.hero-text h1 {
+	margin-bottom: 5px;
+	text-shadow: 3px 3px 5px #000;
+	color: #ddd;
+}
+
+.hero-text span {
 	text-transform: uppercase;
-	font-weight: bold;
-	color: #333;
-	transition: color .2s;
+	color: rgb(31, 99, 15);
 }
 
-.nav-items a:hover {
-	color: brown;
+@media (min-width: 992px) {
+	.product-box {
+		font-size: 0;
+	}
+	.product {
+		display: inline-block;
+		width: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-text h1 {
+		font-size: 42px;
+	}
+	.hero-text p {
+		font-size: 20px;
+	}
+}
+
+.section-title {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+main {
+	margin: 60px 0;
+}
+
+.about-us-info {
+	margin-bottom: 10px;
+	padding: 0 20px;
+}
+
+.products {
+	margin: 60px auto;
+}
+
+.product {
+	letter-spacing: 2px;
+	position: relative;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
+
+.product h3 {
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	font-size: 30px;
+	transition: 0.4s;
+}
+
+.first-product {
+	background-image: url(../img/eat1-small.jpg);
+}
+
+.second-product {
+	background-image: url(../img/eat2-small.jpg);
+}
+
+.third-product {
+	background-image: url(../img/eat3-small.jpg);
+}
+
+.fourth-product {
+	background-image: url(../img/eat4-small.jpg);
+}
+
+.contact {
+	text-align: center;
+}
+
+.contact h3 {
+	margin: 20px 0 5px;
+	text-transform: uppercase;
+}
+
+footer {
+	padding: 30px 10px;
+	text-align: center;
+	background-color: #ddd;
+}
+
+.product:hover h3 {
+	transform: scale(1.4);
+}
+
+section {
+	scroll-margin-top: 80px;
 }
